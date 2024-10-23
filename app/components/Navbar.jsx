@@ -3,8 +3,8 @@ import React from 'react'
 
 export default function Navbar() {
     return (
-        <nav className='w-full h-20 bg-gradient-to-r from-indigo-500 to-indigo-950 flex items-center justify-between px-14' >
-            <div className='flex text-white justify-center items-center gap-3'>
+        <nav className='w-full h-20 bg-gradient-to-r text-sm md:text-base from-indigo-500 to-indigo-950 flex items-center  md:justify-between md:px-14' >
+            <div className='flex text-white justify-center items-center gap-2 md:gap-3'>
                 <figure className='size-10'>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
                         <path d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 0 1-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004ZM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 0 1-.921.42Z" />
@@ -13,8 +13,8 @@ export default function Navbar() {
                 </figure>
                 <h2>Money Master</h2>
             </div>
-            <div className='flex gap-12 items-center text-white '>
-                <ul className='flex  gap-10 '>
+            <div className='flex gap-5 md:gap-12 items-center text-white '>
+                <ul className='flex  gap-3   md:gap-10 '>
                     <li className='cursor-pointer hover:underline'>
                         <Link href="/">
                             Home
@@ -28,8 +28,8 @@ export default function Navbar() {
                         
                     </li>
                 </ul>
-                <button className='bg-indigo-700 w-28 h-10'>Iniciar Sesion</button>
-                <button className='bg-indigo-700 w-28 h-10'>Registrarse</button>
+                <button className='bg-indigo-700 md:w-28 h-10 md:h-10'>Iniciar Sesion</button>
+                <button className='bg-indigo-700 md:w-28 h-10 md:h-10'>Registrarse</button>
             </div>
         </nav>
     )
