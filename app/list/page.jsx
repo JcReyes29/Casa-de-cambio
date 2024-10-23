@@ -1,7 +1,9 @@
-import React from 'react'
+import CurrencyTable from '../components/antiguo';
 
-export default function List() {
+export default function Page() {
   return (
-    <div>List</div>
-  )
+    <div>
+      <CurrencyTable />
+    </div>
+  );
 }
