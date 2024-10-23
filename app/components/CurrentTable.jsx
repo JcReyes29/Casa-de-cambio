@@ -72,9 +72,9 @@ const CurrencyTable = () => {
             <table className="w-full border-collapse bg-white shadow-sm rounded-lg overflow-hidden">
                 <thead className="bg-gray-50">
                     <tr>
-                        <th className="px-6 py-3 text-left text-sm font-medium text-gray-500">MOEDA</th>
+                        <th className="px-6 py-3 text-left text-sm font-medium text-gray-500">MONEDA</th>
                         <th className="px-6 py-3 text-right text-sm font-medium text-gray-500">COMPRA</th>
-                        <th className="px-6 py-3 text-right text-sm font-medium text-gray-500">VENDA</th>
+                        <th className="px-6 py-3 text-right text-sm font-medium text-gray-500">VENTA</th>
                         <th className="px-6 py-3 text-right text-sm font-medium text-gray-500">VAR(%)</th>
                     </tr>
                 </thead>

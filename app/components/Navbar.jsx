@@ -17,7 +17,7 @@ export default function Navbar() {
                 <ul className='flex  gap-3   md:gap-10 '>
                     <li className='cursor-pointer hover:underline'>
                         <Link href="/">
-                            Home
+                            Inicio
                         </Link>
                     </li>
 

@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function Footer() {
   return (
     <footer className='w-full bg-indigo-950 text-white pd-5 md:px-20'>
-      <div className='flex justify-between p-5 items-center flex-col md:flex-row'>
+      <div className='flex justify-between p-5 items-center'>
         <div className='flex gap-5 items-center '>
             <figure className='size-10 '>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
