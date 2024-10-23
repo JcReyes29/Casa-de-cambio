@@ -99,7 +99,7 @@ export default function Form() {
                 )}
                 <button
                     onClick={handleConvert}
-                    className="w-1/2 py-3 bg-blue-600 text-white rounded-lg text-lg hover:bg-blue-500"
+                    className="w-1/2 py-3 bg-gradient-to-r from-indigo-500 to-indigo-800 text-white rounded-lg text-lg "
                 >
                     Convert
                 </button> 

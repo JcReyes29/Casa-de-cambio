@@ -13,8 +13,8 @@ export default function Footer() {
           </svg>
             </figure>
           
-          <h2 className='font-bold'>
-          Casa de Cambio
+          <h2 className='text-2xl font-semibold'>
+          Sync Money
           </h2>
           
         </div>
@@ -49,7 +49,7 @@ export default function Footer() {
       </div>
       <div className='flex flex-col gap-2 p-5 text-center'>
         <h3>Home |  Terms and Condition |  Privacy Policy |  Collection Statement |  Help |  Manage Account</h3>
-        <h3>Copyright © 2024 Casa de cambio, All Rights Reserved</h3>
+        <h3>Copyright © 2024 Sync Money, All Rights Reserved</h3>
       </div>
     </footer>
   );
