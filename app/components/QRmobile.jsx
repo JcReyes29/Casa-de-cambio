@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function QRmobile() {
     return (
-        <div className='max-w-screen-lg min-h-96 bg-cyan-800 flex flex-col items-center gap-4 text-white '>
+        <div className='max-w-screen-lg min-h-96  flex flex-col items-center gap-4 text-white '>
             <h1 className='text-2xl text-center'>
                 Usa nuestra aplicación, disponible en IOs y Android.
             </h1>
