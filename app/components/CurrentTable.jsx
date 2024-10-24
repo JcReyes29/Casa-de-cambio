@@ -2,6 +2,7 @@ import React from 'react';
 
 const CurrencyTable = () => {
 
+    
     const getFlagEmoji = (countryCode) => {
         const codePoints = countryCode
             .toUpperCase()
