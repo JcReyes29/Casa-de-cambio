@@ -1,66 +1,76 @@
 import React from 'react';
 
 const CurrencyTable = () => {
+
+    
+    const getFlagEmoji = (countryCode) => {
+        const codePoints = countryCode
+            .toUpperCase()
+            .split('')
+            .map(char => 127397 + char.charCodeAt());
+        return String.fromCodePoint(...codePoints);
+    };
+
     const currencies = [
         {
             name: 'Peso Argentino',
-            flag: '🇦🇷',
+            countryCode: 'AR',
             buy: 0.0058,
             sell: 0.0058,
             variation: 0
         },
         {
             name: 'Dólar Australiano',
-            flag: '🇦🇺',
+            countryCode: 'AU',
             buy: 3.81,
             sell: 3.815,
             variation: 0.5455
         },
         {
             name: 'Dólar Canadense',
-            flag: '🇨🇦',
+            countryCode: 'CA',
             buy: 4.125,
             sell: 4.13,
             variation: 0.2597
         },
         {
             name: 'Franco Suíço',
-            flag: '🇨🇭',
+            countryCode: 'CH',
             buy: 6.575,
             sell: 6.583,
             variation: 1460.85
         },
         {
             name: 'Dólar Comercial',
-            flag: '🇺🇸',
+            countryCode: 'US',
             buy: 5.701,
             sell: 5.703,
             variation: 0.2285
         },
         {
             name: 'Dólar Turismo',
-            flag: '🇺🇸',
+            countryCode: 'US',
             buy: 5.742,
             sell: 5.922,
             variation: 0.0727
         },
         {
             name: 'Euro',
-            flag: '🇪🇺',
+            countryCode: 'EU',
             buy: 6.16,
             sell: 6.16,
             variation: -0.0487
         },
         {
             name: 'Libra Esterlina',
-            flag: '🇬🇧',
+            countryCode: 'GB',
             buy: 7.384,
             sell: 7.386,
             variation: -0.2296
         },
         {
             name: 'Iene',
-            flag: '🇯🇵',
+            countryCode: 'JP',
             buy: 0.0478,
             sell: 0.0478,
             variation: 0.8439
@@ -83,7 +93,9 @@ const CurrencyTable = () => {
                         <tr key={index} className="hover:bg-gray-50">
                             <td className="px-6 py-4 whitespace-nowrap">
                                 <div className="flex items-center">
-                                    <span className="mr-2">{currency.flag}</span>
+                                    <span className="mr-2 text-xl" role="img" aria-label={`Bandeira ${currency.name}`}>
+                                        {getFlagEmoji(currency.countryCode)}
+                                    </span>
                                     <span className="text-sm text-gray-900">{currency.name}</span>
                                 </div>
                             </td>
