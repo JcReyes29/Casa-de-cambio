@@ -1,7 +1,9 @@
-import React from 'react'
+import CurrencyTable from "../components/CurrentTable";
 
-export default function List() {
+export default function Page() {
   return (
-    <div>List</div>
-  )
+    <div className="flex flex-col h-[90vh] place-content-center">
+      <CurrencyTable />
+    </div>
+  );
 }
