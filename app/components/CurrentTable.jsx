@@ -1,15 +1,10 @@
 import React from 'react';
+import Flags from 'country-flag-icons/react/3x2';
 
 const CurrencyTable = () => {
-
-    
-    const getFlagEmoji = (countryCode) => {
-        const codePoints = countryCode
-            .toUpperCase()
-            .split('')
-            .map(char => 127397 + char.charCodeAt());
-        return String.fromCodePoint(...codePoints);
-    };
+    const EUFlag = () => (
+        <span className="mr-2 text-xl">🇪🇺</span>
+    );
 
     const currencies = [
         {
@@ -77,6 +72,21 @@ const CurrencyTable = () => {
         }
     ];
 
+    const renderFlag = (countryCode) => {
+        if (countryCode === 'EU') {
+            return <EUFlag />;
+        }
+        
+        const FlagComponent = Flags[countryCode];
+        return FlagComponent ? (
+            <span className="mr-2 inline-block w-6">
+                <FlagComponent />
+            </span>
+        ) : (
+            <span className="mr-2">{countryCode}</span>
+        );
+    };
+
     return (
         <div className="w-full max-w-4xl mx-auto p-4">
             <table className="w-full border-collapse bg-white shadow-sm rounded-lg overflow-hidden">
@@ -93,9 +103,7 @@ const CurrencyTable = () => {
                         <tr key={index} className="hover:bg-gray-50">
                             <td className="px-6 py-4 whitespace-nowrap">
                                 <div className="flex items-center">
-                                    <span className="mr-2 text-xl" role="img" aria-label={`Bandeira ${currency.name}`}>
-                                        {getFlagEmoji(currency.countryCode)}
-                                    </span>
+                                    {renderFlag(currency.countryCode)}
                                     <span className="text-sm text-gray-900">{currency.name}</span>
                                 </div>
                             </td>
@@ -105,12 +113,13 @@ const CurrencyTable = () => {
                             <td className="px-6 py-4 text-right text-sm text-gray-500">
                                 {currency.sell.toFixed(4)}
                             </td>
-                            <td className={`px-6 py-4 text-right text-sm ${currency.variation > 0
+                            <td className={`px-6 py-4 text-right text-sm ${
+                                currency.variation > 0
                                     ? 'text-green-600'
                                     : currency.variation < 0
                                         ? 'text-red-600'
                                         : 'text-gray-500'
-                                }`}>
+                            }`}>
                                 {currency.variation.toFixed(4)}
                             </td>
                         </tr>
