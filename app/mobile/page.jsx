@@ -5,7 +5,7 @@ import Celular from '../components/Celular'
 export default function page() {
     return (
         <>
-            <div className="md:flex place-content-center gap-15 bg-cyan-800 items-center">
+            <div className="md:flex place-content-center gap-15 bg-opacity-85 bg-gradient-to-b from-cyan-800 to-cyan-700 items-center">
                 <Celular />
                 <QRmobile/>
             </div>
