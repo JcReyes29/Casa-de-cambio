@@ -35,7 +35,7 @@ export default function Form() {
         setResult(`${amount} ${fromCurrency} = ${convertedAmount.toFixed(2)} ${toCurrency}`);
     };
 
-   
+
     const handleSwap = () => {
         setFromCurrency(toCurrency);
         setToCurrency(fromCurrency);
@@ -99,10 +99,10 @@ export default function Form() {
                 )}
                 <button
                     onClick={handleConvert}
-                    className="w-1/2 py-3 bg-gradient-to-r from-cyan-800 to-cyan-600 text-white rounded-lg text-lg "
+                    className="w-1/2 py-3 bg-gradient-to-r from-cyan-800 to-cyan-600 text-white rounded-lg text-lg"
                 >
                     Convert
-                </button> 
+                </button>
             </div>
         </div>
     );

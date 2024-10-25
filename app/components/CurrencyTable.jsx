@@ -88,32 +88,32 @@ const CurrencyTable = () => {
     };
 
     return (
-        <div className="w-full max-w-4xl mx-auto p-4">
+        <div className="w-full px-4">
             <table className="w-full border-collapse bg-white shadow-sm rounded-lg overflow-hidden">
                 <thead className="bg-gray-50">
                     <tr>
-                        <th className="px-6 py-3 text-left text-sm font-medium text-gray-500">MONEDA</th>
-                        <th className="px-6 py-3 text-right text-sm font-medium text-gray-500">COMPRA</th>
-                        <th className="px-6 py-3 text-right text-sm font-medium text-gray-500">VENTA</th>
-                        <th className="px-6 py-3 text-right text-sm font-medium text-gray-500">VAR(%)</th>
+                        <th className="md:px-6 py-3 text-left text-sm font-medium text-gray-500">MONEDA</th>
+                        <th className="md:px-6 py-3 text-right text-sm font-medium text-gray-500">COMPRA</th>
+                        <th className="md:px-6 py-3 text-right text-sm font-medium text-gray-500">VENTA</th>
+                        <th className="md:px-6 py-3 text-right text-sm font-medium text-gray-500">VAR(%)</th>
                     </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200">
                     {currencies.map((currency, index) => (
                         <tr key={index} className="hover:bg-gray-50">
-                            <td className="px-6 py-4 whitespace-nowrap">
+                            <td className="md:px-6 py-4 whitespace-nowrap">
                                 <div className="flex items-center">
                                     {renderFlag(currency.countryCode)}
                                     <span className="text-sm text-gray-900">{currency.name}</span>
                                 </div>
                             </td>
-                            <td className="px-6 py-4 text-right text-sm text-gray-500">
+                            <td className="md:px-6 py-4 text-right text-sm text-gray-500">
                                 {currency.buy.toFixed(4)}
                             </td>
-                            <td className="px-6 py-4 text-right text-sm text-gray-500">
+                            <td className="md:px-6 py-4 text-right text-sm text-gray-500">
                                 {currency.sell.toFixed(4)}
                             </td>
-                            <td className={`px-6 py-4 text-right text-sm ${
+                            <td className={`md:px-6 py-4 text-right text-sm ${
                                 currency.variation > 0
                                     ? 'text-green-600'
                                     : currency.variation < 0

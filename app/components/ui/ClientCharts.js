@@ -7,7 +7,7 @@ const ClientCharts = () => {
       name: 'Peso Argentino',
       compra: 0.0058,
       venta: 0.0058,
-      variacion: 0.0000
+      variacion: 0.000
     },
     {
       name: 'Dólar Australiano',
@@ -25,7 +25,7 @@ const ClientCharts = () => {
       name: 'Franco Suíço',
       compra: 6.5750,
       venta: 6.5830,
-      variacion: 1460.8500
+      variacion: -0.8500
     },
     {
       name: 'Dólar Comercial',
@@ -64,7 +64,7 @@ const ClientCharts = () => {
   return (
     <div className="p-4 space-y-8">
       <div>
-        <h3 className="text-lg font-semibold mb-4">Taxas de Câmbio</h3>
+        <h3 className="text-lg font-semibold mb-4">Tasas de Cambio</h3>
         <div className="space-y-4">
           {data.map((item, index) => (
             <div key={index} className="w-full">
@@ -72,7 +72,7 @@ const ClientCharts = () => {
                 <span>{item.name}</span>
                 <div className="space-x-4">
                   <span>Compra: {item.compra}</span>
-                  <span>Venda: {item.venta}</span>
+                  <span>Venta: {item.venta}</span>
                 </div>
               </div>
               <div className="h-6 bg-gray-100 rounded-full overflow-hidden relative">
@@ -91,7 +91,7 @@ const ClientCharts = () => {
       </div>
 
       <div>
-        <h3 className="text-lg font-semibold mb-4">Variação (%)</h3>
+        <h3 className="text-lg font-semibold mb-4">Variación (%)</h3>
         <div className="space-y-4">
           {data.map((item, index) => (
             <div key={index} className="w-full">
@@ -120,7 +120,7 @@ const ClientCharts = () => {
         </div>
         <div className="flex items-center">
           <div className="w-4 h-4 bg-green-500 rounded mr-2"></div>
-          <span>Venda</span>
+          <span>Venta</span>
         </div>
       </div>
     </div>

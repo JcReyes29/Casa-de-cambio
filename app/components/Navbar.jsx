@@ -1,13 +1,11 @@
 import Link from 'next/link'
 import React from 'react'
-import DollarCoin from './DollarCoin'
 export default function Navbar() {
     return (
 
-        <nav className='w-full h-20 bg-white shadow-lg text-sm md:text-base flex items-center  md:justify-between md:px-14' >
-            <div className='flex text-white justify-center items-center gap-2 md:gap-3'>
+        <nav className='w-full h-20 bg-white shadow-lg text-sm md:text-base flex items-center px-2 md:justify-between md:px-14' >
+            <div className='flex text-white justify-center items-center px-4 gap-2 md:gap-3'>
                 <img className='hidden md:block' width={200} src='/images/logo10.png' alt=''/>
-                <h2>Money Master</h2>
             </div>
             <div className='flex gap-5 md:gap-12 items-center '>
                 <ul className='flex  gap-3   md:gap-6 '>
